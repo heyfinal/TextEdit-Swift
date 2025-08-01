@@ -14,10 +14,7 @@ let package = Package(
         .executableTarget(
             name: "TextEdit",
             dependencies: [],
-            path: "Sources",
-            resources: [
-                .process("Resources")
-            ]
+            path: "Sources"
         ),
         .testTarget(
             name: "TextEditTests",

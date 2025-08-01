@@ -68,7 +68,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         appMenu.addItem(NSMenuItem(title: "About TextEdit", action: #selector(showAbout), keyEquivalent: ""))
         appMenu.addItem(NSMenuItem.separator())
         appMenu.addItem(NSMenuItem(title: "Hide TextEdit", action: #selector(NSApplication.hide(_:)), keyEquivalent: "h"))
-        appMenu.addItem(NSMenuItem(title: "Hide Others", action: #selector(NSApplication.hideOtherApplications(_:)), keyEquivalent: "h").also { $0.keyEquivalentModifierMask = [.command, .option] })
+        let hideOthersItem = NSMenuItem(title: "Hide Others", action: #selector(NSApplication.hideOtherApplications(_:)), keyEquivalent: "h")
+        hideOthersItem.keyEquivalentModifierMask = [.command, .option]
+        appMenu.addItem(hideOthersItem)
         appMenu.addItem(NSMenuItem(title: "Show All", action: #selector(NSApplication.unhideAllApplications(_:)), keyEquivalent: ""))
         appMenu.addItem(NSMenuItem.separator())
         appMenu.addItem(NSMenuItem(title: "Quit TextEdit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
@@ -91,13 +93,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Edit menu
         let editMenuItem = NSMenuItem()
         let editMenu = NSMenu(title: "Edit")
-        editMenu.addItem(NSMenuItem(title: "Undo", action: #selector(NSTextView.undo(_:)), keyEquivalent: "z"))
-        editMenu.addItem(NSMenuItem(title: "Redo", action: #selector(NSTextView.redo(_:)), keyEquivalent: "Z"))
+        editMenu.addItem(NSMenuItem(title: "Undo", action: #selector(NSText.undo(_:)), keyEquivalent: "z"))
+        editMenu.addItem(NSMenuItem(title: "Redo", action: #selector(NSText.redo(_:)), keyEquivalent: "Z"))
         editMenu.addItem(NSMenuItem.separator())
-        editMenu.addItem(NSMenuItem(title: "Cut", action: #selector(NSTextView.cut(_:)), keyEquivalent: "x"))
-        editMenu.addItem(NSMenuItem(title: "Copy", action: #selector(NSTextView.copy(_:)), keyEquivalent: "c"))
-        editMenu.addItem(NSMenuItem(title: "Paste", action: #selector(NSTextView.paste(_:)), keyEquivalent: "v"))
-        editMenu.addItem(NSMenuItem(title: "Select All", action: #selector(NSTextView.selectAll(_:)), keyEquivalent: "a"))
+        editMenu.addItem(NSMenuItem(title: "Cut", action: #selector(NSText.cut(_:)), keyEquivalent: "x"))
+        editMenu.addItem(NSMenuItem(title: "Copy", action: #selector(NSText.copy(_:)), keyEquivalent: "c"))
+        editMenu.addItem(NSMenuItem(title: "Paste", action: #selector(NSText.paste(_:)), keyEquivalent: "v"))
+        editMenu.addItem(NSMenuItem(title: "Select All", action: #selector(NSText.selectAll(_:)), keyEquivalent: "a"))
         editMenuItem.submenu = editMenu
         mainMenu.addItem(editMenuItem)
         

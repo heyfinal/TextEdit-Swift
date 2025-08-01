@@ -3,8 +3,8 @@ import Foundation
 
 class TextEditController: NSViewController {
     
-    @IBOutlet weak var scrollView: NSScrollView!
-    @IBOutlet weak var textView: NSTextView!
+    private var scrollView: NSScrollView!
+    private var textView: NSTextView!
     
     private var currentDocument: Document?
     private var isShowingLineNumbers = false
@@ -268,7 +268,7 @@ class LineNumberRulerView: NSRulerView {
     
     private func setupAppearance() {
         ruleThickness = 50
-        backgroundColor = NSColor(red: 0.15, green: 0.15, blue: 0.15, alpha: 1.0)
+        self.backgroundColor = NSColor(red: 0.15, green: 0.15, blue: 0.15, alpha: 1.0)
     }
     
     override func drawHashMarksAndLabels(in rect: NSRect) {
@@ -283,7 +283,7 @@ class LineNumberRulerView: NSRulerView {
             .foregroundColor: NSColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1.0)
         ]
         
-        let visibleRange = textView.visibleRange()
+        let _ = textView.visibleRange()
         let visibleRect = textView.visibleRect
         
         for (lineNumber, _) in lines.enumerated() {
