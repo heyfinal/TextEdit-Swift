@@ -1,0 +1,52 @@
+# Xcode
+*.xcodeproj/
+*.xcworkspace/
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+*.xccheckout
+
+# Swift Package Manager
+.build/
+Packages/
+Package.pins
+Package.resolved
+*.swiftpm
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# App bundles and installers
+*.app
+*.dmg
+*.pkg
+
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# IDE
+.vscode/
+.idea/
+
+# Build artifacts
+DerivedData/
+build/
+*.dSYM
+*.ipa
+
+# Testing
+*.lcov
+*.profdata
