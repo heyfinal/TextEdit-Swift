@@ -28,6 +28,12 @@ A modern, dark-themed text editor for macOS built with Swift and AppKit.
 - Undo/Redo support
 - Standard text operations (Cut, Copy, Paste, Select All)
 
+🧠 **AI Integration Ready**
+- Memory system integration for claude-code and codexcli
+- Shared memory between AI assistants
+- Synchronized preferences and conversation history
+- Auto-approval wrappers for seamless operation
+
 ## Installation
 
 ### From Release (Recommended)
@@ -41,6 +47,15 @@ git clone https://github.com/heyfinal/TextEdit-Swift.git
 cd TextEdit-Swift
 swift build -c release
 ```
+
+### Memory System Integration 🧠
+For AI assistant integration with shared memory between claude-code and codexcli:
+
+1. Download the [macOS Memory System Installer](./MEMORY_SYSTEM.md)
+2. Run the installer on your macOS system
+3. Use `claudes` and `codexs` commands with synchronized memory
+
+See [MEMORY_SYSTEM.md](./MEMORY_SYSTEM.md) for complete installation and usage instructions.
 
 ## Development
 
