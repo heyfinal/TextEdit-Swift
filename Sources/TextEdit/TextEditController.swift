@@ -268,7 +268,8 @@ class LineNumberRulerView: NSRulerView {
     
     private func setupAppearance() {
         ruleThickness = 50
-        self.backgroundColor = NSColor(red: 0.15, green: 0.15, blue: 0.15, alpha: 1.0)
+        // Note: NSRulerView doesn't have backgroundColor property directly
+        // The appearance will be handled by the parent scroll view
     }
     
     override func drawHashMarksAndLabels(in rect: NSRect) {

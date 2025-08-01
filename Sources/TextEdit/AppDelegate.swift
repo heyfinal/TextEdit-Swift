@@ -93,8 +93,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Edit menu
         let editMenuItem = NSMenuItem()
         let editMenu = NSMenu(title: "Edit")
-        editMenu.addItem(NSMenuItem(title: "Undo", action: #selector(NSText.undo(_:)), keyEquivalent: "z"))
-        editMenu.addItem(NSMenuItem(title: "Redo", action: #selector(NSText.redo(_:)), keyEquivalent: "Z"))
+        editMenu.addItem(NSMenuItem(title: "Undo", action: #selector(NSResponder.undo(_:)), keyEquivalent: "z"))
+        editMenu.addItem(NSMenuItem(title: "Redo", action: #selector(NSResponder.redo(_:)), keyEquivalent: "Z"))
         editMenu.addItem(NSMenuItem.separator())
         editMenu.addItem(NSMenuItem(title: "Cut", action: #selector(NSText.cut(_:)), keyEquivalent: "x"))
         editMenu.addItem(NSMenuItem(title: "Copy", action: #selector(NSText.copy(_:)), keyEquivalent: "c"))
